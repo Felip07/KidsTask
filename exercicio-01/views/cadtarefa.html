@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Cadastrar Nova Tarefa</h1>
+<br>
+
+<div class="form-tarefa">
+    <form class="form-inline" action="{{url_for('cadtarefa')}}" method="post">
+        <div class="form-group mx-sm-3 mb-2">
+            <label for="tarefa" class="sr-only">Adicionar Nova Tarefa:</label>
+            <input type="text" name="tarefa" class="form-control" id="inputTarefa" placeholder="Insira a tarefa aqui...">
+        </div>
+        <button type="submit" value="Cadastrar" class="btn btn-primary mb-2">Adicionar</button>
+</div>
+</form>
+<br>
+
+
+
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Tarefa</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Feita</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        {% for row in tarefa %}
+
+        <tr>
+            <th scope="row">{{row}}</th>
+            <th scope="row"></th>
+            <th scope="row"></th>
+            <th scope="row"></th>
+        </tr>
+
+        {% endfor %}
+
+    </tbody>
+</table>
+
+{% endblock content %}

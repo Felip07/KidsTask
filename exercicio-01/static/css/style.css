@@ -1,0 +1,40 @@
+
+.indice {
+    display: flex;
+    padding: 10px;
+    gap: 10px 20px;
+}
+
+.title {
+    font-size: 2rem;
+    color: white;
+    font-family:sans-serif;
+}
+
+.form-tarefa{
+    width: 50vw;
+    margin: 30px;
+}
+
+.container-fluid {
+    display: grid;
+    gap: 100px 200px;
+    width: 100vw;
+    height: 91vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-image: url(../imgs/home-background-cover.jpg);
+}
+
+.content {
+    align-items: center;
+    justify-content: center;
+    /* width: 20vw; */
+}
+
+.text {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
