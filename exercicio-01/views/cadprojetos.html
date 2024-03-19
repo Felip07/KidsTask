@@ -2,7 +2,26 @@
 
 {% block content %}
 
-    <h1>Cadastrar Novo Projeto</h1>
-    <hr>
+<h1>Cadastrar Novo Projeto</h1>
+<hr>
+<div class="form-projeto">
+    <form class="form-inline" action="{{url_for('cadproj')}}" method="post">
+        <div class="form-group mx-sm-3 mb-2">
+            <label for="projeto" class="sr-only">Criar novo projeto: </label>
+            <input type="text" name="projeto" class="form-control" id="inputProject"
+                placeholder="Insira o nome do projeto...">
+        </div>
+        <button type="submit" value="Criar" class="btn btn-primary mb-2">Criar</button>
 
-{% endblock content %}
+        <hr>
+
+        <div class="dados">
+            <h4>Dados do Projeto:</h4>
+            <label>Titulo do Projeto: 
+                {% for titulo in projeto %}
+                <div>- {{titulo}}</div>
+            </label>
+            {% endfor %}
+
+
+            {% endblock content %}

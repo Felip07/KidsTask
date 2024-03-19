@@ -8,8 +8,19 @@
 <div class="form-tarefa">
     <form class="form-inline" action="{{url_for('cadtarefa')}}" method="post">
         <div class="form-group mx-sm-3 mb-2">
+            <label for="id" class="sr-only">Adicionar um Id</label>
+            <input type="text" name="Id" class="form-control" id="inputId" placeholder="Insira o id aqui...">
+            <br>
             <label for="tarefa" class="sr-only">Adicionar Nova Tarefa:</label>
-            <input type="text" name="tarefa" class="form-control" id="inputTarefa" placeholder="Insira a tarefa aqui...">
+            <input type="text" name="Tarefa" class="form-control" id="inputTarefa"
+                placeholder="Insira a tarefa aqui...">
+            <br>
+            <label for="descricao" class="sr-only">Adicionar a Descrição:</label>
+            <input type="text" name="Descrição" class="form-control" id="inputDescription"
+                placeholder="Insira a descricao aqui...">
+            <br>
+            <label for="feita" class="sr-only">Já está feita?</label>
+            <input type="text" name="Feita" class="form-control" id="inputFeita" placeholder="Responda aqui...">
         </div>
         <button type="submit" value="Cadastrar" class="btn btn-primary mb-2">Adicionar</button>
 </div>
@@ -22,7 +33,7 @@
 <table class="table">
     <thead class="thead-dark">
         <tr>
-            <th scope="col">#</th>
+            <th scope="col">Id</th>
             <th scope="col">Tarefa</th>
             <th scope="col">Descrição</th>
             <th scope="col">Feita</th>
@@ -30,13 +41,13 @@
     </thead>
     <tbody>
 
-        {% for row in tarefa %}
+        {% for row in tarefas %}
 
         <tr>
-            <th scope="row">{{row}}</th>
-            <th scope="row"></th>
-            <th scope="row"></th>
-            <th scope="row"></th>
+            <th scope="row">{{ row[0] }}</th>
+            <th scope="row">{{ row[1] }}</th>
+            <th scope="row">{{ row[2] }}</th>
+            <th scope="row">{{ row[3] }}</th>
         </tr>
 
         {% endfor %}

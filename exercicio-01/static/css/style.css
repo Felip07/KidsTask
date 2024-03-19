@@ -16,6 +16,11 @@
     margin: 30px;
 }
 
+.form-projeto {
+    width: 50vw;
+    margin: 30px;
+}
+
 .container-fluid {
     display: grid;
     gap: 100px 200px;
